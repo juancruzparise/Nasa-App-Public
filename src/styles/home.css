@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+ /* ALL HOME */
+
+.Navbar{
+    background-color: transparent;
+    color: white;
+}
+.Home{
+    text-align: center;
+}
+.Button_Home{ 
+    min-width: 200px;
+    min-height: 45px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.mr-auto{
+   justify-content: center;
+}
+.Button_Home_Nav{
+    margin-left: 1em;
+    font-size: 1.1em;
+}
+.Logo_Nasa{
+    margin-left: 10px;
+}
+.Video_Background{
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+} 
+
+@media (max-width: 767px) {
+    @media (max-width: 767px) {
+        #videoBG {
+            display: none;
+        }
+        body {
+            background-size: cover;
+        }
+        .Button_Home_Nav{
+          margin-right: 8em;
+          font-size: 1.1em;
+      }
+    }
+}
+
+/*  Search Image  */
+
+.button-div{
+  margin-top: 5px;
+}
+.button{
+  border: none;
+	background: #a3a2a2;
+	color: #ffffff ;
+	font-weight: 100;
+	padding: 10px 10px 5px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+}
+.button:hover {
+	color: rgb(50, 50, 163) !important;
+	font-weight: 700 !important;
+	letter-spacing: 3px;
+	background: none;
+	transition: all 0.3s ease 0s;
+}
+.SearchBarHome{
+    border: 0;
+    width: 40%;
+    height: 100%;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+    margin-top: 30px;
+    color: black;
+}
+
+/* GRID DE IMAGENES DEL HOME */
+
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: center;
+  display: inline-block;
+  margin-left: 1%;
+  }
+.grid img {
+  border: 1px solid rgb(22, 22, 22);
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+  border-radius: 20px;
+}
+/* GALLERY IMAGE */
+div.gallery {
+    margin-top: 5%;
+    border: 1px solid #1d1d1d ;
+    float: left;
+    width: 230px;
+    border-radius: 20px;
+    background-color: #1d1d1d;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+  }
+/* GALLERY VIDEO */
+div.galleryVideo {
+  margin-top: 5%;
+  border: 1px solid #1d1d1d ;
+  float: left;
+  width: 230px;
+  border-radius: 20px;
+  background-color: #1d1d1d;
+}
+
+div.galleryVideo:hover {
+  border: 1px solid #777;
+}
+
+div.galleryVideo img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+  .Img_Grid{
+    transition:0.5s;
+  }
+  .Img_Grid:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+  }
+  .Img_Grid::before, .Img_Grid::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+.Img_Grid::before {
+  transform-origin: left top;
+}
+.Img_Grid::after {
+  transform-origin: right bottom;
+}
+.Img_Grid:hover::before, .Img_Grid:hover::after, .Img_Grid:focus::before, .Img_Grid:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  * {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  margin-top: 3%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+  .grid { 
+    margin-left: -1%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+/* MODAL DE LAS IMAGENES */
+
+.Modal-Image{
+  background-color: #F0EEE3 ;
+}
+.Title_Modal{
+  color: #1d1d1d;
+  font-size: 2em;
+  background-color: #F0EEE3 ;
+}
+.description_Modal{
+  color: #1d1d1d;
+  background-color: #F0EEE3 ;
+}
+.container-Modal{
+  background-color: #F0EEE3 ;
+}
+.close{
+  position: relative;
+  background-color: #0d6efd;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 5px;
+  width: 90px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+}
